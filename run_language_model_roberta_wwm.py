@@ -12,22 +12,16 @@ from transformers import BertTokenizer, BertForMaskedLM, BertConfig
 import logging
 
 from transformers import (
-    CONFIG_MAPPING,
     MODEL_WITH_LM_HEAD_MAPPING,
-    AutoConfig,
-    AutoModelWithLMHead,
-    AutoTokenizer,
-    DataCollatorForLanguageModeling,
     DataCollatorForWholeWordMask,
     HfArgumentParser,
-    LineByLineTextDataset,
     PreTrainedTokenizer,
     TextDataset,
     Trainer,
     TrainingArguments,
     set_seed,
 )
-from libs.lm.CnWwmLineByLineTextDataset import CnWwmLineByLineTextDataset
+from libs.lm.datasets.CnWwmLineByLineTextDataset import CnWwmLineByLineTextDataset
 
 import kp_setup
 
