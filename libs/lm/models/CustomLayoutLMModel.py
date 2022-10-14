@@ -4,7 +4,7 @@
 import logging
 from torch import nn
 from transformers import LayoutLMConfig, LayoutLMModel, BertConfig, BertTokenizer, BertModel, BertForMaskedLM, \
-    LayoutLMForMaskedLM
+    LayoutLMForMaskedLM, LayoutLMForTokenClassification
 import kp_setup
 
 

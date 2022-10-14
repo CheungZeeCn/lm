@@ -45,7 +45,7 @@ class CnWwmPretrainDataset(Dataset):
             examples = read_examples_from_file(data_dir, mode)
             if max_count > 0:
                 examples = examples[:max_count]
-            features = convert_examples_to_features(
+            features = self.convert_examples_to_features(
                 self,
                 examples,
                 max_seq_len,

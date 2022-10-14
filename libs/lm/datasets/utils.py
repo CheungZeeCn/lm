@@ -32,10 +32,10 @@ def rectify_chars_coords(chars_and_coords):
         x0, y0, x1, y1 = ch_info['box']
         if x1-x0 < 0:
             logging.warning("x1-x0 < 0: rectify_chars_coords check: {}".format(ch_info))
-            ch_info[2] = ch_info[0]
+            ch_info['box'][2] = ch_info['box'][0]
         if y1-y0 < 0:
             logging.warning("y1-y0 < 0: rectify_chars_coords check: {}".format(ch_info))
-            ch_info[3] = ch_info[1]
+            ch_info['box'][3] = ch_info['box'][1]
         result.append(ch_info)
     return result
 
